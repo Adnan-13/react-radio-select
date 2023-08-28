@@ -11,7 +11,7 @@ function App() {
 		'option 5',
 	];
 
-	const [selectedOption, setSelectedOption] = useState(options[0]);
+	const [selectedOption, setSelectedOption] = useState('');
 
 	// this is just to show that the value is being updated
 	const viewSelectedOption = <p>Selected option: {selectedOption}</p>;
@@ -20,7 +20,7 @@ function App() {
 		<>
 			<MultiRadioSelect
 				options={options}
-				onChange={setSelectedOption}
+				setValue={setSelectedOption}
 				value={selectedOption}
 			/>
 			{viewSelectedOption}
